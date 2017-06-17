@@ -5,8 +5,39 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.home.ni</groupId>
-    <artifactId>parent</artifactId>
+    <artifactId>spring-clould-examination</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>config-service</module>
+        <module>discovery-service</module>
+        <module>hystrix-dashboard</module>
+        <module>edge-service</module>
+        <module>trace-zipkin</module>
+        <module>admin-service</module>
+    </modules>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.1.RELEASE</version>
+        <relativePath></relativePath>
+    </parent>
+
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
+        <docker.image.prefix>kbastani</docker.image.prefix>
+        <docker.plugin.version>0.3.258</docker.plugin.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+    </dependencies>
 
 
 </project>
