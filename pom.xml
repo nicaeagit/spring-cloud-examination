@@ -15,6 +15,7 @@
         <module>edge-service</module>
         <module>trace-zipkin</module>
         <module>admin-service</module>
+        <module>user-service</module>
     </modules>
 
     <parent>
@@ -22,6 +23,7 @@
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>1.5.2.RELEASE</version>
     </parent>
+
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -37,7 +39,6 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
-        <docker.image.prefix>kbastani</docker.image.prefix>
         <docker.plugin.version>0.3.258</docker.plugin.version>
     </properties>
 
