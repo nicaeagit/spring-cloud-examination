@@ -19,7 +19,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-@EnableZuulProxy
 @EnableHystrix
 @EnableResourceServer
 public class UserApplication {

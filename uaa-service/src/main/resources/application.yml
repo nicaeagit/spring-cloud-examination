@@ -25,6 +25,9 @@ security:
   user:
     password: password
   ignored: /css/**,/js/**,/favicon.ico,/webjars/**
+  oauth2:
+    resource:
+      filter-order: 3
 
 logging:
   level.org.springframework.security: DEBUG
