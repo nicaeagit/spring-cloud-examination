@@ -56,7 +56,7 @@ security:
           -----END PUBLIC KEY-----
       id: openid
       serviceId: ${PREFIX:}resource
-      filter-order: 3
+
 eureka:
   instance:
     prefer-ip-address: true

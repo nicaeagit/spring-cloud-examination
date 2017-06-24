@@ -63,7 +63,7 @@ public class UaaApplication extends WebMvcConfigurerAdapter {
         registry.addViewController("/oauth/confirm_access").setViewName("authorize");
     }
 
-    @Order(SecurityProperties.ACCESS_OVERRIDE_ORDER)
+    @Order(ManagementServerProperties.ACCESS_OVERRIDE_ORDER)
     @Configuration
     protected static class LoginConfiguration extends WebSecurityConfigurerAdapter {
 
