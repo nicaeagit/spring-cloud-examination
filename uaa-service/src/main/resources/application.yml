@@ -1,6 +1,18 @@
 spring:
   application:
     name: uaa-service
+  rabbitmq:
+    host: 192.168.253.132
+    port: 5672
+    username: root
+    password: 308308
+  sleuth:
+    sampler:
+      percentage: 1
+    integration:
+      enabled: false
+    scheduled:
+      skip-pattern: "^org.*HystrixStreamTask$"
 
 # Define the port where the UAA server would be running
 server:
@@ -17,6 +29,9 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
+
+
+
 
 # Define security
 security:

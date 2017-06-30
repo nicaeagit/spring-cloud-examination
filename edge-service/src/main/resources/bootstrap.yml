@@ -3,8 +3,21 @@ spring:
     proxyTargetClass: true
   application:
     name: edge-service
+
 server:
   port: 9999
+
+management:
+  security:
+    enabled: false
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 20000
 ---
 spring:
   profiles: docker
