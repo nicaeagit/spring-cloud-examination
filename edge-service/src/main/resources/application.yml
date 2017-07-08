@@ -6,7 +6,18 @@ spring:
   profiles: development
   application:
     name: edge-service
-
+  rabbitmq:
+    host: 192.168.253.132
+    port: 5672
+    username: root
+    password: 308308
+  sleuth:
+    sampler:
+      percentage: 1
+    integration:
+      enabled: false
+    scheduled:
+      skip-pattern: "^org.*HystrixStreamTask$"
 
 
 zuul:
